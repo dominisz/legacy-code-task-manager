@@ -142,4 +142,17 @@ public class ToDoItemProcessor {
         event.setToDoItemId(toDoItem.getId());
         eventsRegistry.publish(event);
     }
+
+    /**
+     * Klasa wewnętrzna na potrzeby testowania
+     * Udostępnia metody bezpośrednio korzystające z metody prywatnych klasy zewnętrznej
+     */
+    class ForTesting {
+
+        void processDefined(ToDoItem toDoItem) {
+            ToDoItemProcessor.this.processDefined(toDoItem);
+        }
+
+    }
+
 }
