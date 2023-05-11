@@ -64,7 +64,7 @@ public class ToDoItemProcessor {
         }
     }
 
-    private void processDefined(ToDoItem toDoItem) {
+    protected void processDefined(ToDoItem toDoItem) {
         if (toDoItem instanceof Story) {
             Story story = (Story) toDoItem;
             if (story.getTasks().isEmpty()) {
